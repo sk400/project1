@@ -15,7 +15,7 @@ const data = [
 
 const users = data.map((user) => user.name);
 
-const separator = "--------------------------";
+const separator = "*--------------------------*";
 
 const message =
   "To get something you never had you have to do something you never did";
@@ -23,5 +23,5 @@ const message =
 data.forEach((item) => {
   const logText = `${item.name}, remember this quote "${message}"`;
   console.log(logText);
-  console.log(separator)
+  console.log(separator);
 });
