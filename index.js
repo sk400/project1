@@ -12,3 +12,6 @@ const data = [
     age: 20,
   },
 ];
+
+const users = data.map((user) => user.name);
+console.log(users);
