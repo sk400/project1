@@ -12,7 +12,7 @@ const data = [
     age: 20,
   },
   {
-    name: "Rshmi",
+    name: "Rashmi",
     age: 30,
   },
 ];
@@ -24,19 +24,23 @@ const separator = "*--------------------------*";
 const message =
   "To get something you never had you have to do something you never did";
 
+const randomUserIndex = Math.floor(Math.random() * 4);
+
 data.forEach((item) => {
   if (item.age > 18) {
     if (item.name === "Rashmi") {
-      console.log(separator);
       console.log("Rashmi bhai, Good morning");
-      return;
+    } else {
+      const logText = `${item.name}, remember this quote "${message}"`;
+      console.log(logText);
+      console.log(separator);
     }
-
-    const logText = `${item.name}, remember this quote "${message}"`;
-    console.log(logText);
-    console.log(separator);
   } else {
-    const ageDifference = 18 - item.age
-    console.log(`Wait for ${ageDifference} years to know more.`)
+    const ageDifference = 18 - item.age;
+    console.log(`${item.name}, wait for ${ageDifference} years to know more.`);
   }
 });
+
+const randomUser = data[randomUserIndex];
+
+console.log(randomUser.name);
