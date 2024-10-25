@@ -14,4 +14,13 @@ const data = [
 ];
 
 const users = data.map((user) => user.name);
-console.log(users);
+
+const text = "This is a random text";
+const text2 = "This is a random text2";
+const message =
+  "To get something you never had you have to do something you never did";
+
+data.forEach((item) => {
+  const logText = `${item.name}, remember this quote "${message}"`;
+  console.log(logText);
+});
