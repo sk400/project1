@@ -14,9 +14,6 @@ const data = [
 ];
 
 const users = data.map((user) => user.name);
-
-const text = "This is a random text";
-const text2 = "This is a random text2";
 const message =
   "To get something you never had you have to do something you never did";
 
