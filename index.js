@@ -11,6 +11,10 @@ const data = [
     name: "Duryodhan",
     age: 20,
   },
+  {
+    name: "Rshmi",
+    age: 30,
+  },
 ];
 
 const users = data.map((user) => user.name);
@@ -21,7 +25,18 @@ const message =
   "To get something you never had you have to do something you never did";
 
 data.forEach((item) => {
-  const logText = `${item.name}, remember this quote "${message}"`;
-  console.log(logText);
-  console.log(separator);
+  if (item.age > 18) {
+    if (item.name === "Rashmi") {
+      console.log(separator);
+      console.log("Rashmi bhai, Good morning");
+      return;
+    }
+
+    const logText = `${item.name}, remember this quote "${message}"`;
+    console.log(logText);
+    console.log(separator);
+  } else {
+    const ageDifference = 18 - item.age
+    console.log(`Wait for ${ageDifference} years to know more.`)
+  }
 });
